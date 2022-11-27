@@ -1,0 +1,127 @@
+.advantages {
+  background-color: $solitude;
+  background-image: url("../img/ice.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $base-white;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @media (min-width: $desktop-width) {
+    @include retina {
+      background-image: url("../img/ice@2x.webp");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/ice_tablet.webp");
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include retina {
+      background-image: url("../img/ice_tablet@2x.webp");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/ice_mobile.webp");
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    @include retina {
+      background-image: url("../img/ice_mobile@2x.webp");
+    }
+  }
+
+  h2 {
+    color: $tangaroa;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 60px;
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $tablet-width) {
+      gap: 30px;
+    }
+
+    @media (max-width: $mobile-width) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  li {
+    margin: 0;
+    background-color: $base-white;
+    padding: 87px 30px 50px;
+    position: relative;
+
+    @media (max-width: $tablet-width) {
+      padding: 76px 16px 25px 20px;
+    }
+
+    h3 {
+      color: $tangaroa;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 500;
+
+      @media (max-width: $tablet-width) {
+        line-height: 25px;
+      }
+    }
+
+    p {
+      color: $tangaroa;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  li::before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    top: 30px;
+    left: 30px;
+
+    @media (max-width: $tablet-width) {
+      top: 26px;
+      left: 20px;
+      height: 32px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 25px;
+    }
+  }
+
+  li:nth-child(3n+1):before {
+    width: 27px;
+    background-image: url("../../img/liner.svg");
+  }
+
+  li:nth-child(3n-1):before {
+    width: 38px;
+    background-image: url("../../img/check.svg");
+  }
+  li:nth-child(3n):before {
+    width: 44px;
+    background-image: url("../../img/boat.svg");
+  }
+}

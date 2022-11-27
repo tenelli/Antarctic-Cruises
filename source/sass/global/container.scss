@@ -1,0 +1,16 @@
+.container {
+  margin: 0 auto;
+  padding: 0 103px;
+  min-width: 818px;
+  max-width: 1714px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 678px;
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+    padding: 0 15px;
+  }
+}
