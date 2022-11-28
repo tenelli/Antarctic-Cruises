@@ -3,7 +3,6 @@
   background-image: url("../img/top.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  color: $base-white;
   background-position: center bottom;
 
   @media (min-width: $desktop-width) {
@@ -23,28 +22,12 @@
   @media (max-width: $mobile-width) {
     background-image: url("../img/top_mobile.webp");
 
+    &--modal {
+      height: 529px;
+    }
+
     @include retina {
       background-image: url("../img/top_mobile@2x.webp");
-    }
-  }
-
-  h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 61px;
-    margin-bottom: 29px;
-    margin-left: 95px;
-
-    @media (max-width: $tablet-width) {
-      font-size: 50px;
-      margin-left: 0;
-    }
-
-    @media (max-width: $mobile-width) {
-      font-size: 36px;
-      line-height: 45px;
-      margin-bottom: 25px;
     }
   }
 
@@ -55,6 +38,7 @@
     line-height: 24px;
     margin-bottom: 283px;
     margin-left: 95px;
+    color: $base-white;
 
     @media (max-width: $tablet-width) {
       font-size: 18px;
@@ -66,6 +50,26 @@
     @media (max-width: $mobile-width) {
       font-size: 16px;
       margin-bottom: 185px;
+    }
+  }
+
+  a {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+      color: $base-white;
+    }
+
+    @media (max-width: $tablet-width) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 }
@@ -84,13 +88,13 @@
   }
 
   @media (max-width: $mobile-width) {
+    position: relative;
     padding-top: 20px;
     margin-bottom: 143px;
-  }
 
-  nav {
-    @media (max-width: $mobile-width) {
-      display: none;
+    &--no-js {
+      position: static;
+      padding-top: 0;
     }
   }
 
@@ -114,16 +118,6 @@
     li {
       font-size: 16px;
       line-height: 20px;
-
-       a {
-        color: $base-white;
-       }
-
-      @media (max-width: $tablet-width) {
-      }
-
-      @media (max-width: $mobile-width) {
-      }
     }
   }
 }
@@ -141,5 +135,74 @@
   @media (max-width: $mobile-width) {
     width: 42px;
     height: 22px;
+
+    &--no-js {
+      display: none;
+    }
   }
+}
+
+.header__burger {
+    cursor: pointer;
+    position: absolute;
+    background: url("../img/burger.svg") no-repeat;
+    width: 24px;
+    height: 14px;
+    border: none;
+    top: 25px;
+    right: 0;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+}
+
+.header__title {
+  color: $base-white;
+  margin: 0;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 29px;
+  margin-left: 95px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 50px;
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 25px;
+    margin-top: 0;
+
+    &--no-js {
+      margin-top: 648px;
+    }
+  }
+}
+
+.header__navigation {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.header__navigation--no-js {
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.header__navigation-logo {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    &--no-js {
+      display: block;
+      margin-bottom: 42px;
+    }
+  }
+
 }

@@ -180,10 +180,22 @@
       margin-bottom: 40px;
       font-size: 16px;
       line-height: 22px;
+    }
 
-      br {
+    br {
+      &:first-child {
         display: none;
       }
-    }
+
+      @media (max-width: $mobile-width) {
+        &:first-child {
+          display: block;
+        }
+
+        &:last-child {
+            display: none;
+          }
+        }
+      }
   }
 }

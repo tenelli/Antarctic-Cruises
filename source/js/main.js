@@ -138,3 +138,95 @@ if (phoneInputs) {
     input.addEventListener('paste', onPhonePaste, false);
   });
 }
+
+
+let burgerButton = document.querySelector('[data-open-button]');
+let modal = document.querySelector('[data-modal-container]');
+let closeButton = document.querySelector('[data-close-button]');
+let pageBody = document.body;
+let headerLogo = document.querySelector('[data-header-logo]');
+let headerTitle = document.querySelector('[data-header-title]');
+let headerDescription = document.querySelector('[data-header-description]');
+let header = document.querySelector('[data-page-header');
+let headerMain = document.querySelector('[data-header-main]');
+let headerNavigation = document.querySelector('[data-header-navigation');
+let headerDarkLogo = document.querySelector('[data-dark-logo]');
+
+headerMain.classList.remove('header__main--no-js');
+headerLogo.classList.remove('header__logo--no-js');
+headerNavigation.classList.remove('header__navigation--no-js');
+headerDarkLogo.classList.remove('header__navigation-logo--no-js');
+headerTitle.classList.remove('header__title--no-js');
+
+if (modal && (window.matchMedia('screen and (max-width: 767px)').matches)) {
+  burgerButton.classList.remove('visually-hidden');
+  burgerButton.addEventListener('click', openModal);
+}
+
+function isEscapeKey(evt) {
+  return evt.key === 'Escape';
+}
+
+function closeModal() {
+  modal.classList.add('visually-hidden');
+  headerLogo.classList.remove('hidden-mobile');
+  headerTitle.classList.remove('hidden-mobile');
+  headerDescription.classList.remove('hidden-mobile');
+  header.classList.remove('header--modal');
+  pageBody.classList.remove('scroll-lock');
+  closeButton.removeEventListener('click', closeModal);
+  document.removeEventListener('keydown', onModalEsc);
+  document.removeEventListener('click', onClickOverlay);
+}
+
+function openModal() {
+  pageBody.classList.add('scroll-lock');
+  modal.classList.remove('visually-hidden');
+  headerLogo.classList.add('hidden-mobile');
+  headerTitle.classList.add('hidden-mobile');
+  headerDescription.classList.add('hidden-mobile');
+  header.classList.add('header--modal');
+  closeButton.addEventListener('click', closeModal);
+  document.addEventListener('keydown', onModalEsc);
+  modal.addEventListener('click', onClickOverlay);
+}
+
+function onModalEsc(evt) {
+  if (isEscapeKey(evt)) {
+    evt.preventDefault();
+    closeModal();
+  }
+}
+
+let modalWrapper = document.querySelector('[data-modal-wrapper]');
+function onClickOverlay(evt) {
+  const elementsСlickArea = !evt.composedPath().includes(modalWrapper);
+  if (elementsСlickArea) {
+    closeModal();
+  }
+}
+
+/* global ymaps */
+/* eslint no-undef: "error" */
+let block = document.querySelector('#map');
+block.firstElementChild.classList.add('visually-hidden');
+ymaps.ready(init);
+function init() {
+  if (!block) {
+    return;
+  }
+
+  let map = new ymaps.Map('map', {
+    center: [59.938635, 30.323118],
+    zoom: 15.5,
+  });
+
+  let placemark = new ymaps.Placemark([59.937468, 30.322623], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/svg/map_tag.svg',
+    iconImageSize: [18, 22],
+    iconImageOffset: [-15, -12],
+  });
+
+  map.geoObjects.add(placemark);
+}

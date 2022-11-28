@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 43, 102, 0.5);
+  z-index: 20;
+}
+
+.modal__wrapper {
+  position: relative;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.modal__close-button {
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+    background-image: url("../img/close.svg");
+  }
+}
