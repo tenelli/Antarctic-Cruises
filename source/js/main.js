@@ -46,6 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // используйте .closest(el)
 const routes = document.querySelectorAll('.routes__article');
 routes.forEach((article) => {
+  article.classList.remove('routes__article--no-js');
   article.addEventListener('click', () => {
     let temp = article.firstElementChild;
     let card = article.lastElementChild;
@@ -267,4 +268,3 @@ function checkFillInputField(evt) {
 }
 
 form.addEventListener('submit', checkFillInputField);
-

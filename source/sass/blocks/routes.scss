@@ -74,27 +74,13 @@
 }
 
 
+
 .routes__article {
   background-color: $tangaroa;
   color: $base-white;
   width: 100%;
   height: 100%;
-
-  @media (min-width: $desktop-width) {
-    &:hover {
-      .routes__picture {
-        display: none;
-      }
-
-      .routes__main {
-        display: block;
-      }
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    position: relative;
-  }
+  position: relative;
 
   ul {
     list-style: none;
@@ -111,22 +97,56 @@
   }
 }
 
+.routes__article {
+
+  @media (min-width: $desktop-width) {
+    .routes__picture {
+      z-index: 20;
+    }
+
+    .routes__main {
+      z-index: -20;
+    }
+
+    &:hover {
+      .routes__picture {
+        z-index: -20;
+      }
+
+      .routes__main {
+        z-index: 20;
+      }
+    }
+
+  }
+}
+
+
+.routes__article--no-js {
+  .routes__main {
+    z-index: -20;
+  }
+}
+
+.routes__article--no-js:hover {
+  .routes__picture {
+    z-index: -20;
+  }
+
+  .routes__main {
+    z-index: 20;
+  }
+}
+
 .routes__main {
   width: 100%;
   height: 100%;
   padding: 25px;
   max-height: 386px;
   overflow: auto;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-
-  @media (max-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
 
   h3 {
     margin-bottom: 15px;
@@ -193,4 +213,3 @@
     padding: 0 15px;
   }
 }
-

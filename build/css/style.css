@@ -593,6 +593,14 @@ button,
   clip-path: inset(100%);
 }
 
+.on-top {
+  z-index: 20;
+}
+
+.on-bottom {
+  z-index: -20;
+}
+
 .scroll-lock-ios {
   position: fixed;
   overflow: hidden;
@@ -897,6 +905,7 @@ button,
   color: #f9fbfd;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .routes__article ul {
@@ -913,12 +922,27 @@ button,
   margin: 0;
 }
 
+.routes__article--no-js .routes__main {
+  z-index: -20;
+}
+
+.routes__article--no-js:hover .routes__picture {
+  z-index: -20;
+}
+
+.routes__article--no-js:hover .routes__main {
+  z-index: 20;
+}
+
 .routes__main {
   width: 100%;
   height: 100%;
   padding: 25px;
   max-height: 386px;
   overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .routes__main h3 {
@@ -1414,16 +1438,20 @@ button,
 }
 
 @media (min-width: 1024px) {
+  .routes__article .routes__picture {
+    z-index: 20;
+  }
+
+  .routes__article .routes__main {
+    z-index: -20;
+  }
+
   .routes__article:hover .routes__picture {
-    display: none;
+    z-index: -20;
   }
 
   .routes__article:hover .routes__main {
-    display: block;
-  }
-
-  .routes__main {
-    display: none;
+    z-index: 20;
   }
 
   .booking__info {
@@ -1464,12 +1492,15 @@ button,
     clip-path: inset(100%);
   }
 
-  .on-top {
-    z-index: 20;
+  .is-hidden {
+    display: none;
   }
 
-  .on-bottom {
-    z-index: -20;
+  .is-hidden:hover,
+  .is-hidden:focus,
+  .is-hidden:active {
+    display: block;
+    z-index: 20;
   }
 
   .container {
@@ -1575,16 +1606,6 @@ button,
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-  }
-
-  .routes__article {
-    position: relative;
-  }
-
-  .routes__main {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   .routes__container {

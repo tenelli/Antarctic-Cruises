@@ -80,14 +80,23 @@
 }
 
 .on-top {
-  @media (max-width: $tablet-width) {
-  z-index: 20;
-  }
+    z-index: 20;
 }
 
 .on-bottom {
+    z-index: -20;
+}
+
+.is-hidden {
   @media (max-width: $tablet-width) {
-  z-index: -20;
+    display: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      display: block;
+      z-index: 20;
+    }
   }
 }
 
