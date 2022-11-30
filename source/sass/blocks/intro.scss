@@ -14,17 +14,16 @@
 }
 
 .intro__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 88px;
-  align-items: center;
 
   @media (max-width: $tablet-width) {
     gap: 25px;
-    align-items: flex-start;
   }
 
   @media (max-width: $mobile-width) {
-    display: block;
+    grid-template-columns: 1fr;
   }
 
   picture {
@@ -57,8 +56,6 @@
 
 
 .intro__description {
-    max-width: 50%;
-
   @media (max-width: $mobile-width) {
     max-width: 100%;
     margin-bottom: 50px;
@@ -90,5 +87,3 @@
     font-weight: 400;
   }
 }
-
-

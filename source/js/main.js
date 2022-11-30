@@ -44,17 +44,16 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
 const routes = document.querySelectorAll('.routes__article');
 routes.forEach((article) => {
-  if (window.matchMedia('screen and (max-width: 1023px)').matches) {
-    article.addEventListener('click', () => {
-      let temp = article.firstElementChild;
-      let card = article.lastElementChild;
-      temp.classList.toggle('hidden');
-      card.classList.toggle('hidden');
-    });
-  }
+  article.addEventListener('click', () => {
+    let temp = article.firstElementChild;
+    let card = article.lastElementChild;
+    temp.classList.toggle('on-top');
+    card.classList.toggle('on-top');
+    temp.classList.toggle('on-bottom');
+    card.classList.toggle('on-bottom');
+  });
 });
 
 
@@ -83,7 +82,6 @@ const onPhonePaste = function (evt) {
 
 const onPhoneInput = (evt) => {
   const input = evt.target;
-  // Положение курсора
   const selectionStart = input.selectionStart;
   let inputNumbersValue = getInputNumbersValue(input);
   let formattedInputValue = '';
@@ -152,13 +150,14 @@ let headerMain = document.querySelector('[data-header-main]');
 let headerNavigation = document.querySelector('[data-header-navigation');
 let headerDarkLogo = document.querySelector('[data-dark-logo]');
 
+// убрала модификаторы там, где это можно было вменяемо сделать
 headerMain.classList.remove('header__main--no-js');
-headerLogo.classList.remove('header__logo--no-js');
-headerNavigation.classList.remove('header__navigation--no-js');
-headerDarkLogo.classList.remove('header__navigation-logo--no-js');
+headerLogo.classList.remove('hidden-mobile');
+headerNavigation.classList.add('hidden-mobile');
+headerDarkLogo.classList.remove('is-shown');
 headerTitle.classList.remove('header__title--no-js');
 
-if (modal && (window.matchMedia('screen and (max-width: 767px)').matches)) {
+if (modal) {
   burgerButton.classList.remove('visually-hidden');
   burgerButton.addEventListener('click', openModal);
 }
@@ -207,7 +206,6 @@ function onClickOverlay(evt) {
 }
 
 /* global ymaps */
-/* eslint no-undef: "error" */
 let block = document.querySelector('#map');
 block.firstElementChild.classList.add('visually-hidden');
 ymaps.ready(init);
@@ -230,3 +228,43 @@ function init() {
 
   map.geoObjects.add(placemark);
 }
+
+let formName = document.querySelector('[data-name-input]');
+let formPhone = document.querySelector('[data-tel-input]');
+let formEmail = document.querySelector('[data-email-input]');
+let form = document.querySelector('[data-form]');
+let isStorageSupport = true;
+let userNameStorage = '';
+let userPhoneStorage = '';
+let userEmailStorage = '';
+
+if (form) {
+  try {
+    userNameStorage = localStorage.getItem('formName');
+    userPhoneStorage = localStorage.getItem('formPhone');
+    userEmailStorage = localStorage.getItem('formEmail');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+}
+
+if (userNameStorage) {
+  formName.value = userNameStorage;
+  formPhone.value = userPhoneStorage;
+  formEmail.value = userEmailStorage;
+}
+
+function checkFillInputField(evt) {
+  if (!formName || !formPhone || !formEmail) {
+    evt.preventDefault();
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem('formName', formName.value);
+      localStorage.setItem('formPhone', formPhone.value);
+      localStorage.setItem('formEmail', formEmail.value);
+    }
+  }
+}
+
+form.addEventListener('submit', checkFillInputField);
+

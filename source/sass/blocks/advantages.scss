@@ -111,17 +111,18 @@
     }
   }
 
-  li:nth-child(3n+1):before {
+  li:nth-child(3n+1)::before {
     width: 27px;
-    background-image: url("../../img/liner.svg");
+    background-image: url("../img/svg/liner.svg");
   }
 
-  li:nth-child(3n-1):before {
+  li:nth-child(3n-1)::before {
     width: 38px;
-    background-image: url("../../img/check.svg");
+    background-image: url("../img/svg/check.svg");
   }
-  li:nth-child(3n):before {
+
+  li:nth-child(3n)::before {
     width: 44px;
-    background-image: url("../../img/boat.svg");
+    background-image: url("../img/svg/boat.svg");
   }
 }

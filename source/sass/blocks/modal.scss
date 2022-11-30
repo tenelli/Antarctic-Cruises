@@ -11,15 +11,37 @@
 }
 
 .modal__wrapper {
-  position: relative;
+  height: 100%;
+  position: absolute;
+  background-color: $base-white;
+  left: 35px;
+  width: calc(100% - 35px);
+  min-height: 568px;
+  padding: 20px 15px;
 
-  @media (min-width: 768px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    margin-bottom: 28px;
+  }
+
+  a {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $tangaroa;
+  }
+
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }
 
 .modal__close-button {
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     position: absolute;
     top: 25px;
     right: 15px;
@@ -27,6 +49,6 @@
     height: 15px;
     border: none;
     cursor: pointer;
-    background-image: url("../img/close.svg");
+    background-image: url("../img/svg/close.svg");
   }
 }

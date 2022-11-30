@@ -149,6 +149,7 @@
 }
 
 .routes__booking-button {
+  cursor: pointer;
   background-color: $base-white;
   display: block;
   width: 100%;
@@ -158,6 +159,18 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
+
+  &:hover,
+  &:focus {
+    border-radius: 3px;
+    background-color: $pattens-blue;
+  }
+
+  &:active {
+    border-radius: 6px;
+    background-color: $danube;
+    color: $base-white;
+  }
 }
 
 .routes__container {
@@ -180,3 +193,4 @@
     padding: 0 15px;
   }
 }
+

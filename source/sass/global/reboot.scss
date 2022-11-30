@@ -17,7 +17,7 @@ html {
   line-height: 24px;
   font-family: $motserrat;
   color: $tangaroa;
-
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки

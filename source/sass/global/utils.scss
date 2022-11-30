@@ -73,6 +73,24 @@
   }
 }
 
+.is-shown {
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.on-top {
+  @media (max-width: $tablet-width) {
+  z-index: 20;
+  }
+}
+
+.on-bottom {
+  @media (max-width: $tablet-width) {
+  z-index: -20;
+  }
+}
+
 .scroll-lock-ios {
   position: fixed;
 
