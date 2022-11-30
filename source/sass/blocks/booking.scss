@@ -1,6 +1,6 @@
 .booking {
   background-color: $pattens-blue;
-  padding-top: 50px;
+  padding-top: 48px;
   padding-bottom: 50px;
   background-image: url("../img/snow.webp");
   background-repeat: no-repeat;
@@ -33,7 +33,6 @@
 
 .booking__wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding-left: 163px;
   padding-right: 163px;
@@ -47,6 +46,7 @@
 .booking__form-wrapper {
   background-color: $tangaroa;
   padding: 50px;
+  padding-top: 43px;
   width: 403px;
 
   @media (max-width: $mobile-width) {
@@ -57,7 +57,7 @@
     color: $base-white;
     margin: 0;
     padding: 0;
-    margin-bottom: 35px;
+    margin-bottom: 26px;
     font-size: 18px;
     line-height: 27px;
     font-weight: 500;
@@ -65,8 +65,8 @@
 
   input {
     width: 303px;
-    padding: 11px 16px;
-    margin-bottom: 20px;
+    padding: 11px 16px 10px;
+    margin-bottom: 17px;
     font-family: $motserrat;
     color: $tangaroa;
     font-size: 14px;
@@ -87,7 +87,7 @@
 
   button {
     width: 303px;
-    padding: 11px 15px;
+    padding: 10px 15px;
     font-size: 14px;
     line-height: 21px;
     color: $tangaroa;
@@ -122,7 +122,7 @@
     cursor: pointer;
     display: block;
     margin-left: 23px;
-    margin-top: 15px;
+    margin-top: 5px;
     color: $base-white;
     font-size: 10px;
     line-height: 13px;
@@ -163,6 +163,7 @@
 .booking__info {
   @media (min-width: $desktop-width) {
     margin-right: 100px;
+    margin-top: 162px;
   }
 
   h2 {
@@ -171,7 +172,7 @@
     font-size: 40px;
     line-height: 60px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 25px;

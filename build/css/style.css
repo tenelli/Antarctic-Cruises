@@ -646,7 +646,7 @@ button,
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 283px;
+  margin-bottom: 290px;
   margin-left: 95px;
   color: #f9fbfd;
 }
@@ -670,7 +670,7 @@ button,
 
 .header__main {
   padding-top: 35px;
-  margin-bottom: 210px;
+  margin-bottom: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,7 +684,16 @@ button,
   align-items: flex-start;
 }
 
+.header__main nav {
+  margin: 0;
+  padding: 0;
+  margin-right: 1px;
+  margin-top: 12px;
+}
+
 .header__main ul {
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,8 +701,6 @@ button,
   flex-wrap: wrap;
   list-style: none;
   gap: 33px;
-  margin: 0;
-  margin-top: 13px;
   -ms-flex-line-pack: start;
   align-content: flex-start;
 }
@@ -701,6 +708,10 @@ button,
 .header__main ul li {
   font-size: 16px;
   line-height: 20px;
+}
+
+.header__main ul li a {
+  display: block;
 }
 
 .header__logo {
@@ -725,9 +736,9 @@ button,
   color: #f9fbfd;
   margin: 0;
   font-weight: 700;
-  font-size: 50px;
-  line-height: 61px;
-  margin-bottom: 29px;
+  font-size: 54px;
+  line-height: 66px;
+  margin-bottom: 7px;
   margin-left: 95px;
 }
 
@@ -737,7 +748,7 @@ button,
 }
 
 .intro {
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 145px;
 }
 
@@ -746,7 +757,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 88px;
+  gap: 35px;
 }
 
 .intro__container picture {
@@ -762,10 +773,11 @@ button,
 
 .intro__description h2 {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font-size: 28px;
   line-height: 42px;
   font-weight: 600;
+  margin-top: 53px;
 }
 
 .intro__description p {
@@ -781,7 +793,7 @@ button,
   background-size: cover;
   background-repeat: no-repeat;
   color: #f9fbfd;
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 120px;
 }
 
@@ -789,7 +801,7 @@ button,
   color: #011c40;
   text-align: center;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   font-size: 28px;
   line-height: 42px;
   font-weight: 600;
@@ -809,7 +821,7 @@ button,
 .advantages li {
   margin: 0;
   background-color: #f9fbfd;
-  padding: 87px 30px 50px;
+  padding: 79px 30px 48px;
   position: relative;
 }
 
@@ -817,7 +829,7 @@ button,
   color: #011c40;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 7px;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
@@ -855,14 +867,14 @@ button,
 }
 
 .routes {
-  padding-top: 95px;
+  padding-top: 85px;
   padding-bottom: 120px;
 }
 
 .routes h2 {
   margin: 0;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   font-size: 28px;
   line-height: 42px;
   font-weight: 600;
@@ -895,7 +907,7 @@ button,
 
 .routes__picture h3 {
   position: absolute;
-  bottom: 30px;
+  bottom: 25px;
   left: 30px;
   right: 30px;
 }
@@ -912,7 +924,7 @@ button,
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .routes__article h3 {
@@ -961,7 +973,7 @@ button,
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .routes__booking-button {
@@ -998,7 +1010,7 @@ button,
 
 .booking {
   background-color: #d8e7f4;
-  padding-top: 50px;
+  padding-top: 48px;
   padding-bottom: 50px;
   background-image: url("../img/snow.webp");
   background-repeat: no-repeat;
@@ -1012,9 +1024,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1025,6 +1034,7 @@ button,
 .booking__form-wrapper {
   background-color: #011c40;
   padding: 50px;
+  padding-top: 43px;
   width: 403px;
 }
 
@@ -1032,7 +1042,7 @@ button,
   color: #f9fbfd;
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
@@ -1040,8 +1050,8 @@ button,
 
 .booking__form-wrapper input {
   width: 303px;
-  padding: 11px 16px;
-  margin-bottom: 20px;
+  padding: 11px 16px 10px;
+  margin-bottom: 17px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
   font-size: 14px;
@@ -1058,7 +1068,7 @@ button,
 
 .booking__form-wrapper button {
   width: 303px;
-  padding: 11px 15px;
+  padding: 10px 15px;
   font-size: 14px;
   line-height: 21px;
   color: #011c40;
@@ -1088,7 +1098,7 @@ button,
   cursor: pointer;
   display: block;
   margin-left: 23px;
-  margin-top: 15px;
+  margin-top: 5px;
   color: #f9fbfd;
   font-size: 10px;
   line-height: 13px;
@@ -1135,7 +1145,7 @@ button,
   font-size: 40px;
   line-height: 60px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .booking__info p {
@@ -1199,7 +1209,6 @@ button,
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 10px;
 }
 
 .navigation__logo {
@@ -1222,14 +1231,18 @@ button,
   min-height: 306px;
 }
 
+.about__main {
+  margin-left: 30px;
+}
+
 .about__main p {
   margin: 0;
   padding: 0;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
-  margin-top: 61px;
-  margin-bottom: 45px;
+  margin-top: 72px;
+  margin-bottom: 35px;
 }
 
 .about__main ul {
@@ -1246,7 +1259,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   gap: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .about__main li br {
@@ -1279,16 +1292,17 @@ button,
 .footer {
   background-color: #011c40;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 43px;
 }
 
 .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+}
+
+.footer__logo {
+  margin-right: 40px;
 }
 
 .footer__logo svg {
@@ -1297,16 +1311,21 @@ button,
   fill: #f9fbfd;
 }
 
+.footer__navigation {
+  margin-right: auto;
+}
+
 .footer__navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  margin-top: 13px;
+  margin-top: 6px;
   padding: 0;
   gap: 33px;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -1456,6 +1475,7 @@ button,
 
   .booking__info {
     margin-right: 100px;
+    margin-top: 162px;
   }
 
   .modal__wrapper {
@@ -1541,6 +1561,7 @@ button,
 
   .header__title {
     font-size: 50px;
+    line-height: 61px;
     margin-left: 0;
   }
 

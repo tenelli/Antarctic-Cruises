@@ -1,5 +1,5 @@
 .intro {
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 145px;
 
   @media (max-width: $tablet-width) {
@@ -16,7 +16,7 @@
 .intro__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 88px;
+  gap: 35px;
 
   @media (max-width: $tablet-width) {
     gap: 25px;
@@ -63,10 +63,11 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     font-size: 28px;
     line-height: 42px;
     font-weight: 600;
+    margin-top: 53px;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 30px;

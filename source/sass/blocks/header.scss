@@ -36,7 +36,7 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-    margin-bottom: 283px;
+    margin-bottom: 290px;
     margin-left: 95px;
     color: $base-white;
 
@@ -87,7 +87,7 @@
 
 .header__main {
   padding-top: 35px;
-  margin-bottom: 210px;
+  margin-bottom: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -109,13 +109,20 @@
     }
   }
 
+  nav {
+    margin: 0;
+    padding: 0;
+    margin-right: 1px;
+    margin-top: 12px;
+  }
+
   ul {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     gap: 33px;
-    margin: 0;
-    margin-top: 13px;
     align-content: flex-start;
 
     @media (max-width: $tablet-width) {
@@ -126,6 +133,10 @@
     li {
       font-size: 16px;
       line-height: 20px;
+
+       a {
+        display: block;
+       }
     }
   }
 }
@@ -167,13 +178,14 @@
   color: $base-white;
   margin: 0;
   font-weight: 700;
-  font-size: 50px;
-  line-height: 61px;
-  margin-bottom: 29px;
+  font-size: 54px;
+  line-height: 66px;
+  margin-bottom: 7px;
   margin-left: 95px;
 
   @media (max-width: $tablet-width) {
     font-size: 50px;
+    line-height: 61px;
     margin-left: 0;
   }
 

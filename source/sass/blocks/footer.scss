@@ -1,7 +1,7 @@
 .footer {
   background-color: $tangaroa;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 43px;
 
   @media (max-width: $mobile-width) {
     padding-top: 40px;
@@ -11,7 +11,6 @@
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
 
   @media (max-width: $mobile-width) {
     display: block;
@@ -19,6 +18,8 @@
 }
 
 .footer__logo {
+  margin-right: 40px;
+
   svg {
     width: 70px;
     height: 38px;
@@ -43,11 +44,14 @@
 }
 
 .footer__navigation {
+  margin-right: auto;
+
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
-    margin-top: 13px;
+    margin-top: 6px;
     padding: 0;
     gap: 33px;
     flex-wrap: wrap;
