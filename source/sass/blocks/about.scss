@@ -4,7 +4,7 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 99px;
   }
 
   @media (max-width: $mobile-width) {
@@ -20,7 +20,7 @@
   min-height: 306px;
 
   @media (max-width: $tablet-width) {
-    gap: 30px;
+    gap: 27px;
     min-height: 335px;
   }
 
@@ -32,7 +32,6 @@
 
 
 .about__main {
-  margin-left: 30px;
 
   @media (max-width: $mobile-width) {
     order: -1;
@@ -56,7 +55,8 @@
     }
 
     @media (max-width: $tablet-width) {
-      margin-top: 0;
+      margin-top: 67px;
+      margin-bottom: 26px;
     }
 
     @media (max-width: $mobile-width) {
@@ -80,6 +80,13 @@
       align-items: flex-start;
     }
 
+    svg {
+      display: block;
+      fill: $tangaroa;
+      width: 18px;
+      height: 22px;
+    }
+
     br {
       display: none;
 
@@ -94,10 +101,6 @@
     line-height: 24px;
     font-weight: 400;
 
-    svg {
-      fill: $tangaroa;
-    }
-
     &:hover,
     &:focus,
     &:active {
@@ -108,6 +111,12 @@
 }
 
 .about__map {
+  width: 560px;
+
+  @media (max-width: $tablet-width) {
+    width: 324px;
+  }
+
   img {
     width: 100%;
     object-fit: cover;

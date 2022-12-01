@@ -15,7 +15,7 @@
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/ice_tablet.webp");
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
 
     @include retina {
@@ -41,6 +41,11 @@
     font-size: 28px;
     line-height: 42px;
     font-weight: 600;
+
+    @media (max-width: $tablet-width) {
+      font-size: 26px;
+      line-height: 39px;
+    }
   }
 
   ul {
@@ -63,11 +68,11 @@
   li {
     margin: 0;
     background-color: $base-white;
-    padding: 79px 30px 48px;
+    padding: 29px 30px 46px;
     position: relative;
 
     @media (max-width: $tablet-width) {
-      padding: 76px 16px 25px 20px;
+      padding: 26px 16px 20px 20px;
     }
 
     h3 {
@@ -82,6 +87,14 @@
       @media (max-width: $tablet-width) {
         line-height: 25px;
       }
+
+      br {
+        display: none;
+
+        @media (max-width: $tablet-width) {
+          display: block;
+        }
+      }
     }
 
     p {
@@ -91,38 +104,41 @@
       font-weight: 400;
       margin: 0;
     }
-  }
 
-  li::before {
-    position: absolute;
-    content: "";
-    height: 32px;
-    top: 30px;
-    left: 30px;
-
-    @media (max-width: $tablet-width) {
-      top: 26px;
-      left: 20px;
-      height: 32px;
-    }
-
-    @media (max-width: $mobile-width) {
-      top: 25px;
+    svg {
+      display: block;
+      margin-bottom: 20px;
+      fill: $tangaroa;
     }
   }
+}
 
-  li:nth-child(3n+1)::before {
+li:nth-child(3n+1) svg {
+  width: 27px;
+  height: 32px;
+
+  @media (max-width: $tablet-width) {
+    width: 21px;
+    height: 26px;
+  }
+}
+
+li:nth-child(3n-1) svg {
+  width: 38px;
+  height: 32px;
+
+  @media (max-width: $tablet-width) {
     width: 27px;
-    background-image: url("../img/svg/liner.svg");
+    height: 26px;
   }
+}
 
-  li:nth-child(3n-1)::before {
-    width: 38px;
-    background-image: url("../img/svg/check.svg");
-  }
+li:nth-child(3n) svg {
+  width: 44px;
+  height: 32px;
 
-  li:nth-child(3n)::before {
-    width: 44px;
-    background-image: url("../img/svg/boat.svg");
+  @media (max-width: $tablet-width) {
+    width: 36px;
+    height: 26px;
   }
 }

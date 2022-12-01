@@ -766,7 +766,6 @@ button,
 
 .intro__container img {
   width: 100%;
-  height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -778,6 +777,10 @@ button,
   line-height: 42px;
   font-weight: 600;
   margin-top: 53px;
+}
+
+.intro__description h2 br {
+  display: none;
 }
 
 .intro__description p {
@@ -821,7 +824,7 @@ button,
 .advantages li {
   margin: 0;
   background-color: #f9fbfd;
-  padding: 79px 30px 48px;
+  padding: 29px 30px 46px;
   position: relative;
 }
 
@@ -835,6 +838,10 @@ button,
   font-weight: 500;
 }
 
+.advantages li h3 br {
+  display: none;
+}
+
 .advantages li p {
   color: #011c40;
   font-size: 14px;
@@ -843,27 +850,25 @@ button,
   margin: 0;
 }
 
-.advantages li::before {
-  position: absolute;
-  content: "";
-  height: 32px;
-  top: 30px;
-  left: 30px;
+.advantages li svg {
+  display: block;
+  margin-bottom: 20px;
+  fill: #011c40;
 }
 
-.advantages li:nth-child(3n+1)::before {
+li:nth-child(3n+1) svg {
   width: 27px;
-  background-image: url("../img/svg/liner.svg");
+  height: 32px;
 }
 
-.advantages li:nth-child(3n-1)::before {
+li:nth-child(3n-1) svg {
   width: 38px;
-  background-image: url("../img/svg/check.svg");
+  height: 32px;
 }
 
-.advantages li:nth-child(3n)::before {
+li:nth-child(3n) svg {
   width: 44px;
-  background-image: url("../img/svg/boat.svg");
+  height: 32px;
 }
 
 .routes {
@@ -1231,10 +1236,6 @@ button,
   min-height: 306px;
 }
 
-.about__main {
-  margin-left: 30px;
-}
-
 .about__main p {
   margin: 0;
   padding: 0;
@@ -1262,6 +1263,13 @@ button,
   margin-bottom: 20px;
 }
 
+.about__main li svg {
+  display: block;
+  fill: #011c40;
+  width: 18px;
+  height: 22px;
+}
+
 .about__main li br {
   display: none;
 }
@@ -1272,15 +1280,15 @@ button,
   font-weight: 400;
 }
 
-.about__main a svg {
-  fill: #011c40;
-}
-
 .about__main a:hover,
 .about__main a:focus,
 .about__main a:active {
   color: #00acee;
   text-decoration: underline;
+}
+
+.about__map {
+  width: 560px;
 }
 
 .about__map img {
@@ -1359,7 +1367,10 @@ button,
 }
 
 .footer__social a svg {
+  display: block;
   fill: #f9fbfd;
+  width: 20px;
+  height: 20px;
 }
 
 .footer__social a:hover svg,
@@ -1457,6 +1468,10 @@ button,
 }
 
 @media (min-width: 1024px) {
+  .intro__container img {
+    height: 100%;
+  }
+
   .routes__article .routes__picture {
     z-index: 20;
   }
@@ -1535,7 +1550,7 @@ button,
   .header p {
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 280px;
+    margin-bottom: 276px;
     margin-left: 0;
   }
 
@@ -1545,8 +1560,12 @@ button,
   }
 
   .header__main {
-    padding-top: 30px;
-    margin-bottom: 230px;
+    padding-top: 27px;
+    margin-bottom: 220px;
+  }
+
+  .header__main nav {
+    margin-top: 0;
   }
 
   .header__main ul {
@@ -1557,42 +1576,58 @@ button,
   .header__logo {
     width: 38px;
     height: 20px;
+    margin-top: 2px;
   }
 
   .header__title {
     font-size: 50px;
     line-height: 61px;
     margin-left: 0;
+    margin-bottom: 10px;
   }
 
   .intro {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 38px;
+    padding-bottom: 92px;
   }
 
   .intro__container {
-    gap: 25px;
+    gap: 15px;
   }
 
   .intro__container picture {
     margin: 0 auto;
     max-width: 324px;
+    margin-top: 15px;
   }
 
   .intro__container img {
     min-height: 264px;
   }
 
+  .intro__description h2 br {
+    display: block;
+  }
+
   .intro__description h2 {
-    margin-bottom: 30px;
+    margin-bottom: 17px;
     font-size: 26px;
     line-height: 36px;
   }
 
+  .intro__description p {
+    max-width: 324px;
+  }
+
   .advantages {
     background-image: url("../img/ice_tablet.webp");
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
+  }
+
+  .advantages h2 {
+    font-size: 26px;
+    line-height: 39px;
   }
 
   .advantages ul {
@@ -1600,33 +1635,61 @@ button,
   }
 
   .advantages li {
-    padding: 76px 16px 25px 20px;
+    padding: 26px 16px 20px 20px;
   }
 
   .advantages li h3 {
     line-height: 25px;
   }
 
-  .advantages li::before {
-    top: 26px;
-    left: 20px;
-    height: 32px;
+  .advantages li h3 br {
+    display: block;
+  }
+
+  li:nth-child(3n+1) svg {
+    width: 21px;
+    height: 26px;
+  }
+
+  li:nth-child(3n-1) svg {
+    width: 27px;
+    height: 26px;
+  }
+
+  li:nth-child(3n) svg {
+    width: 36px;
+    height: 26px;
   }
 
   .routes {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
   }
 
   .routes h2 {
     font-size: 26px;
     line-height: 39px;
+    margin-bottom: 49px;
   }
 
   .routes__wrapper {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+
+  .routes__picture h3 {
+    left: 35px;
+    right: 35px;
+    bottom: 26px;
+  }
+
+  .routes__article ul {
+    margin-bottom: 27px;
+  }
+
+  .routes__main {
+    padding: 30px 35px;
   }
 
   .routes__container {
@@ -1636,6 +1699,8 @@ button,
 
   .booking {
     background-image: url("../img/snow_tablet.webp");
+    padding-top: 87px;
+    padding-bottom: 100px;
   }
 
   .booking__wrapper {
@@ -1645,15 +1710,21 @@ button,
     flex-direction: column;
   }
 
+  .booking__form-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .booking__info h2 {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
+    text-align: center;
   }
 
   .booking__info p {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 53px;
   }
 
   .modal__close-button {
@@ -1669,16 +1740,17 @@ button,
 
   .about {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 99px;
   }
 
   .about__container {
-    gap: 30px;
+    gap: 27px;
     min-height: 335px;
   }
 
   .about__main p {
-    margin-top: 0;
+    margin-top: 67px;
+    margin-bottom: 26px;
   }
 
   .about__main li {
@@ -1689,6 +1761,20 @@ button,
 
   .about__main li br {
     display: block;
+  }
+
+  .about__map {
+    width: 324px;
+  }
+
+  .footer {
+    padding-top: 42px;
+    padding-bottom: 40px;
+  }
+
+  .footer__logo {
+    margin-top: 10px;
+    margin-right: 25px;
   }
 
   .footer__logo svg {
@@ -1707,8 +1793,12 @@ button,
   }
 
   .footer__social ul {
-    gap: 22px;
-    margin-top: 2px;
+    gap: 20px;
+  }
+
+  .footer__social a svg {
+    width: 17px;
+    height: 16px;
   }
 }
 
@@ -1840,10 +1930,6 @@ button,
   .advantages ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-  }
-
-  .advantages li::before {
-    top: 25px;
   }
 
   .routes {
