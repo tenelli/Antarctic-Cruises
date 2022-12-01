@@ -11,12 +11,10 @@
 }
 
 .modal__wrapper {
-  height: 100%;
   position: absolute;
   background-color: $base-white;
   left: 35px;
   width: calc(100% - 35px);
-  min-height: 568px;
   padding: 20px 15px;
 
   ul {

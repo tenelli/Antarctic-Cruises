@@ -49,6 +49,10 @@
 
     margin-bottom: 15px;
   }
+
+  &:hover svg {
+    fill: $deep-sky-blue;
+  }
 }
 
 .footer__navigation {
@@ -62,7 +66,6 @@
     margin-top: 6px;
     padding: 0;
     gap: 33px;
-    flex-wrap: wrap;
 
     @media (max-width: $tablet-width) {
       gap: 23px;
@@ -117,11 +120,11 @@
     margin-top: 11px;
     padding: 0;
     gap: 27px;
-    min-width: 103px;
+    min-width: 115px;
     margin-left: 10px;
 
     @media (max-width: $tablet-width) {
-      min-width: 88px;
+      min-width: 92px;
       gap: 20px;
     }
 

@@ -167,6 +167,11 @@
       color: $color-aqua;
     }
 
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+
     &::before {
       position: absolute;
       content: "";

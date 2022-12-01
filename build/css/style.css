@@ -737,6 +737,12 @@ button,
   display: none;
 }
 
+.header__burger:hover,
+.header__burger:focus,
+.header__burger:active {
+  outline: 1px solid #00acee;
+}
+
 .header__title {
   color: #f9fbfd;
   margin: 0;
@@ -1126,6 +1132,11 @@ li:nth-child(3n) svg {
   color: #00e7ff;
 }
 
+.booking__accept label:focus,
+.booking__accept label:active {
+  text-decoration: underline;
+}
+
 .booking__accept label::before {
   position: absolute;
   content: "";
@@ -1190,12 +1201,10 @@ li:nth-child(3n) svg {
 }
 
 .modal__wrapper {
-  height: 100%;
   position: absolute;
   background-color: #f9fbfd;
   left: 35px;
   width: calc(100% - 35px);
-  min-height: 568px;
   padding: 20px 15px;
 }
 
@@ -1329,6 +1338,10 @@ li:nth-child(3n) svg {
   fill: #f9fbfd;
 }
 
+.footer__logo:hover svg {
+  fill: #00acee;
+}
+
 .footer__navigation {
   margin-right: auto;
 }
@@ -1344,7 +1357,6 @@ li:nth-child(3n) svg {
   margin-top: 6px;
   padding: 0;
   gap: 33px;
-  flex-wrap: wrap;
 }
 
 .footer__navigation a {
@@ -1376,7 +1388,7 @@ li:nth-child(3n) svg {
   margin-top: 11px;
   padding: 0;
   gap: 27px;
-  min-width: 103px;
+  min-width: 115px;
   margin-left: 10px;
 }
 
@@ -1815,7 +1827,7 @@ li:nth-child(3n) svg {
   }
 
   .footer__social ul {
-    min-width: 88px;
+    min-width: 92px;
     gap: 20px;
   }
 

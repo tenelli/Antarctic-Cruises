@@ -174,6 +174,7 @@ function closeModal() {
   headerDescription.classList.remove('hidden-mobile');
   header.classList.remove('header--modal');
   pageBody.classList.remove('scroll-lock');
+  modal.removeEventListener('keydown', trapFocus);
   closeButton.removeEventListener('click', closeModal);
   document.removeEventListener('keydown', onModalEsc);
   document.removeEventListener('click', onClickOverlay);
@@ -181,11 +182,13 @@ function closeModal() {
 
 function openModal() {
   pageBody.classList.add('scroll-lock');
+  closeButton.focus();
   modal.classList.remove('visually-hidden');
   headerLogo.classList.add('hidden-mobile');
   headerTitle.classList.add('hidden-mobile');
   headerDescription.classList.add('hidden-mobile');
   header.classList.add('header--modal');
+  modal.addEventListener('keydown', trapFocus);
   closeButton.addEventListener('click', closeModal);
   document.addEventListener('keydown', onModalEsc);
   modal.addEventListener('click', onClickOverlay);
@@ -205,6 +208,31 @@ function onClickOverlay(evt) {
     closeModal();
   }
 }
+
+let focusableEls = modal.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="tel"]:not([disabled]), input[type="text"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+let firstFocusableEl = focusableEls[0];
+let lastFocusableEl = focusableEls[focusableEls.length - 1];
+let KEYCODE_TAB = 9;
+
+let trapFocus = (evt) => {
+  const isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+
+  if (!isTabPressed) {
+    return;
+  }
+
+  if (evt.shiftKey) {
+    if (document.activeElement === firstFocusableEl) {
+      lastFocusableEl.focus();
+      evt.preventDefault();
+    }
+  } else {
+    if (document.activeElement === lastFocusableEl) {
+      firstFocusableEl.focus();
+      evt.preventDefault();
+    }
+  }
+};
 
 /* global ymaps */
 let block = document.querySelector('#map');
