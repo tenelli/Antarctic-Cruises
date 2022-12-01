@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 65px;
+    padding-top: 58px;
     padding-bottom: 65px;
   }
 
@@ -29,7 +29,7 @@
     @media (max-width: $mobile-width) {
       font-size: 24px;
       line-height: 36px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -77,10 +77,14 @@
       right: 35px;
       bottom: 26px;
     }
+
+    @media (max-width: $mobile-width) {
+      left: 24px;
+      right: 24px;
+      bottom: 17px;
+    }
   }
 }
-
-
 
 .routes__article {
   background-color: $tangaroa;
@@ -106,9 +110,6 @@
     font-weight: 500;
     margin: 0;
   }
-}
-
-.routes__article {
 
   @media (min-width: $desktop-width) {
     .routes__picture {
@@ -161,6 +162,10 @@
 
   @media (max-width: $tablet-width) {
     padding: 30px 35px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 30px 25px;
   }
 
   h3 {

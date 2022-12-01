@@ -639,6 +639,7 @@ button,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+  padding-bottom: 290px;
 }
 
 .header p {
@@ -646,9 +647,12 @@ button,
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 290px;
   margin-left: 95px;
   color: #f9fbfd;
+}
+
+.header p br {
+  display: none;
 }
 
 .header a {
@@ -674,8 +678,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -701,8 +703,6 @@ button,
   flex-wrap: wrap;
   list-style: none;
   gap: 33px;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
 }
 
 .header__main ul li {
@@ -715,6 +715,11 @@ button,
 }
 
 .header__logo {
+  margin-right: 20px;
+}
+
+.header__logo svg {
+  display: block;
   width: 70px;
   height: 38px;
   fill: #f9fbfd;
@@ -1041,6 +1046,7 @@ li:nth-child(3n) svg {
   padding: 50px;
   padding-top: 43px;
   width: 403px;
+  height: 100%;
 }
 
 .booking__form-wrapper p {
@@ -1108,6 +1114,10 @@ li:nth-child(3n) svg {
   font-size: 10px;
   line-height: 13px;
   font-weight: 400;
+}
+
+.booking__accept label br {
+  display: none;
 }
 
 .booking__accept label:hover,
@@ -1200,7 +1210,7 @@ li:nth-child(3n) svg {
 }
 
 .modal__wrapper li {
-  margin-bottom: 28px;
+  margin-left: 10px;
 }
 
 .modal__wrapper a {
@@ -1359,11 +1369,19 @@ li:nth-child(3n) svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   margin-top: 11px;
   padding: 0;
   gap: 27px;
+  min-width: 103px;
+  margin-left: 10px;
+}
+
+.footer__social a {
+  margin: 0;
 }
 
 .footer__social a svg {
@@ -1510,6 +1528,10 @@ li:nth-child(3n) svg {
   .routes__container {
     padding: 0 25px;
   }
+
+  .about__map {
+    width: 400px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1545,12 +1567,12 @@ li:nth-child(3n) svg {
 
   .header {
     background-image: url("../img/top_tablet.webp");
+    padding-bottom: 276px;
   }
 
   .header p {
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 276px;
     margin-left: 0;
   }
 
@@ -1573,7 +1595,7 @@ li:nth-child(3n) svg {
     margin-top: 5px;
   }
 
-  .header__logo {
+  .header__logo svg {
     width: 38px;
     height: 20px;
     margin-top: 2px;
@@ -1793,6 +1815,7 @@ li:nth-child(3n) svg {
   }
 
   .footer__social ul {
+    min-width: 88px;
     gap: 20px;
   }
 
@@ -1842,6 +1865,7 @@ li:nth-child(3n) svg {
 
   .header {
     background-image: url("../img/top_mobile.webp");
+    padding-bottom: 177px;
   }
 
   .header--modal {
@@ -1850,7 +1874,10 @@ li:nth-child(3n) svg {
 
   .header p {
     font-size: 16px;
-    margin-bottom: 185px;
+  }
+
+  .header p br {
+    display: block;
   }
 
   .header a {
@@ -1861,7 +1888,7 @@ li:nth-child(3n) svg {
   .header__main {
     position: relative;
     padding-top: 20px;
-    margin-bottom: 143px;
+    margin-bottom: 130px;
   }
 
   .header__main--no-js {
@@ -1869,7 +1896,7 @@ li:nth-child(3n) svg {
     padding-top: 0;
   }
 
-  .header__logo {
+  .header__logo svg {
     width: 42px;
     height: 22px;
   }
@@ -1881,7 +1908,7 @@ li:nth-child(3n) svg {
   .header__title {
     font-size: 36px;
     line-height: 45px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     margin-top: 0;
   }
 
@@ -1894,13 +1921,12 @@ li:nth-child(3n) svg {
   }
 
   .intro {
-    padding-top: 65px;
-    padding-bottom: 85px;
+    padding-top: 58px;
+    padding-bottom: 70px;
   }
 
   .intro__container {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    display: block;
   }
 
   .intro__container picture {
@@ -1913,18 +1939,30 @@ li:nth-child(3n) svg {
 
   .intro__description {
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 29px;
   }
 
   .intro__description h2 {
     font-size: 24px;
     line-height: 34px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .intro__description p {
+    max-width: 100%;
   }
 
   .advantages {
     background-image: url("../img/ice_mobile.webp");
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 57px;
+    padding-bottom: 67px;
+  }
+
+  .advantages h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
   }
 
   .advantages ul {
@@ -1933,14 +1971,14 @@ li:nth-child(3n) svg {
   }
 
   .routes {
-    padding-top: 65px;
+    padding-top: 58px;
     padding-bottom: 65px;
   }
 
   .routes h2 {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .routes__wrapper {
@@ -1950,6 +1988,16 @@ li:nth-child(3n) svg {
     padding-right: 10px;
   }
 
+  .routes__picture h3 {
+    left: 24px;
+    right: 24px;
+    bottom: 17px;
+  }
+
+  .routes__main {
+    padding: 30px 25px;
+  }
+
   .routes__container {
     min-width: 290px;
     padding: 0 15px;
@@ -1957,10 +2005,18 @@ li:nth-child(3n) svg {
 
   .booking {
     background-image: url("../img/snow_mobile.webp");
+    padding-top: 60px;
+    padding-bottom: 65px;
   }
 
   .booking__form-wrapper {
     width: 100%;
+    padding: 32px 28px 43px;
+  }
+
+  .booking__form-wrapper p {
+    text-align: center;
+    margin-bottom: 24px;
   }
 
   .booking__form-wrapper input {
@@ -1971,14 +2027,44 @@ li:nth-child(3n) svg {
     width: 100%;
   }
 
+  .booking__accept {
+    margin-bottom: 24px;
+  }
+
+  .booking__accept label {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+
+  .booking__accept label br {
+    display: block;
+  }
+
+  .booking__accept label::before {
+    left: 2px;
+    top: 47%;
+    -webkit-transform: translateY(-47%);
+    -ms-transform: translateY(-47%);
+    transform: translateY(-47%);
+  }
+
+  .booking__accept input:checked + label::after {
+    left: 5px;
+    top: 47%;
+    -webkit-transform: translateY(-47%);
+    -ms-transform: translateY(-47%);
+    transform: translateY(-47%);
+  }
+
   .booking__info h2 {
     font-size: 24px;
     line-height: 31px;
     text-align: center;
+    margin-bottom: 12px;
   }
 
   .booking__info p {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -2022,8 +2108,8 @@ li:nth-child(3n) svg {
   }
 
   .about {
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 58px;
+    padding-bottom: 64px;
   }
 
   .about__container {
@@ -2040,10 +2126,17 @@ li:nth-child(3n) svg {
 
   .about__main p {
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  .about__map {
+    width: 100%;
+    height: 316px;
   }
 
   .footer {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 40px;
   }
 
@@ -2052,7 +2145,7 @@ li:nth-child(3n) svg {
   }
 
   .footer__logo {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 
   .footer__logo svg {
@@ -2065,15 +2158,16 @@ li:nth-child(3n) svg {
   }
 
   .footer__navigation li {
-    margin-bottom: 23px;
+    margin-bottom: 8px;
   }
 
   .footer__navigation li:last-of-type {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
   }
 
   .footer__social ul {
     margin-top: 0;
+    margin-left: 0;
   }
 }
 

@@ -8,8 +8,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 65px;
-    padding-bottom: 85px;
+    padding-top: 58px;
+    padding-bottom: 70px;
   }
 }
 
@@ -23,7 +23,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    grid-template-columns: 1fr;
+    display: block;
   }
 
   picture {
@@ -62,7 +62,7 @@
 .intro__description {
   @media (max-width: $mobile-width) {
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 29px;
   }
 
   h2 {
@@ -90,6 +90,8 @@
     @media (max-width: $mobile-width) {
       font-size: 24px;
       line-height: 34px;
+      margin-top: 0;
+      margin-bottom: 12px;
     }
   }
 
@@ -101,6 +103,10 @@
 
     @media (max-width: $tablet-width) {
       max-width: 324px;
+    }
+
+    @media (max-width: $mobile-width) {
+      max-width: 100%;
     }
   }
 }
