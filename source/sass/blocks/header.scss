@@ -26,7 +26,7 @@
     padding-bottom: 177px;
 
     &--modal {
-      height: 508px;
+      height: 500px;
     }
 
     @include retina {
@@ -66,9 +66,16 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
 
     @media (min-width: 768px) {
       color: $base-white;
+
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid $base-white;
+      }
     }
 
     @media (max-width: $tablet-width) {
@@ -79,12 +86,11 @@
     @media (max-width: $mobile-width) {
       font-size: 18px;
       line-height: 22px;
-    }
 
-    &:hover,
-    &:focus {
-      padding-bottom: 2px;
-      border-bottom: 1px solid $base-white;
+      &:hover,
+      &:focus {
+        color: $deep-sky-blue;
+      }
     }
 
     &:active {
@@ -140,9 +146,16 @@
       margin-top: 5px;
     }
 
+    @media (max-width: $mobile-width) {
+      width: 90%;
+      gap: 0;
+      margin-left: 25px;
+    }
+
     li {
       font-size: 16px;
       line-height: 20px;
+      margin-bottom: 25px;
 
       a {
         display: block;
@@ -229,6 +242,8 @@
   fill: $tangaroa;
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 42px;
+    margin-bottom: 38px;
+    margin-top: 20px;
+    margin-left: 15px;
   }
 }

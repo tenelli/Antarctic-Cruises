@@ -660,12 +660,8 @@ button,
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
-}
-
-.header a:hover,
-.header a:focus {
   padding-bottom: 2px;
-  border-bottom: 1px solid #f9fbfd;
+  border-bottom: 1px solid transparent;
 }
 
 .header a:active {
@@ -708,6 +704,7 @@ button,
 .header__main ul li {
   font-size: 16px;
   line-height: 20px;
+  margin-bottom: 25px;
 }
 
 .header__main ul li a {
@@ -1229,6 +1226,12 @@ li:nth-child(3n) svg {
   color: #011c40;
 }
 
+.modal__wrapper a:hover,
+.modal__wrapper a:focus,
+.modal__wrapper a:active {
+  color: #00acee;
+}
+
 .navigation ul {
   list-style: none;
   margin: 0;
@@ -1470,6 +1473,11 @@ li:nth-child(3n) svg {
 @media (min-width: 768px) {
   .header a {
     color: #f9fbfd;
+  }
+
+  .header a:hover,
+  .header a:focus {
+    border-bottom: 1px solid #f9fbfd;
   }
 
   .about__map img {
@@ -1881,7 +1889,7 @@ li:nth-child(3n) svg {
   }
 
   .header--modal {
-    height: 508px;
+    height: 500px;
   }
 
   .header p {
@@ -1897,6 +1905,11 @@ li:nth-child(3n) svg {
     line-height: 22px;
   }
 
+  .header a:hover,
+  .header a:focus {
+    color: #00acee;
+  }
+
   .header__main {
     position: relative;
     padding-top: 20px;
@@ -1906,6 +1919,12 @@ li:nth-child(3n) svg {
   .header__main--no-js {
     position: static;
     padding-top: 0;
+  }
+
+  .header__main ul {
+    width: 90%;
+    gap: 0;
+    margin-left: 25px;
   }
 
   .header__logo svg {
@@ -1929,7 +1948,9 @@ li:nth-child(3n) svg {
   }
 
   .header__navigation-logo {
-    margin-bottom: 42px;
+    margin-bottom: 38px;
+    margin-top: 20px;
+    margin-left: 15px;
   }
 
   .intro {
@@ -2109,7 +2130,7 @@ li:nth-child(3n) svg {
   }
 
   .navigation li {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
   .navigation a {
