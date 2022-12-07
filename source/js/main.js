@@ -248,7 +248,7 @@ function init() {
     zoom: 15.5,
   });
 
-  let placemark = new ymaps.Placemark([59.937468, 30.323023], {}, {
+  let placemark = new ymaps.Placemark([59.937428, 30.322603], {}, {
     iconLayout: 'default#image',
     iconImageHref: 'img/svg/map_tag.svg',
     iconImageSize: [18, 22],

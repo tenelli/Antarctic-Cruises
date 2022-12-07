@@ -639,7 +639,7 @@ button,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  padding-bottom: 290px;
+  padding-bottom: 288px;
 }
 
 .header p {
@@ -670,7 +670,7 @@ button,
 
 .header__main {
   padding-top: 35px;
-  margin-bottom: 200px;
+  margin-bottom: 174px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -746,7 +746,7 @@ button,
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
-  margin-bottom: 7px;
+  margin-bottom: 12px;
   margin-left: 95px;
 }
 
@@ -756,7 +756,7 @@ button,
 }
 
 .intro {
-  padding-top: 110px;
+  padding-top: 112px;
   padding-bottom: 145px;
 }
 
@@ -1203,6 +1203,7 @@ li:nth-child(3n) svg {
   left: 35px;
   width: calc(100% - 35px);
   padding: 20px 15px;
+  min-height: 568px;
 }
 
 .modal__wrapper ul {
@@ -1246,7 +1247,7 @@ li:nth-child(3n) svg {
 
 .about {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 118px;
 }
 
 .about__container {
@@ -1288,8 +1289,8 @@ li:nth-child(3n) svg {
 .about__main li svg {
   display: block;
   fill: #011c40;
-  width: 18px;
-  height: 22px;
+  max-width: 18px;
+  max-height: 22px;
 }
 
 .about__main li br {
@@ -1360,6 +1361,7 @@ li:nth-child(3n) svg {
   margin-top: 6px;
   padding: 0;
   gap: 33px;
+  max-width: 800px;
 }
 
 .footer__navigation a {
@@ -1391,8 +1393,8 @@ li:nth-child(3n) svg {
   margin-top: 11px;
   padding: 0;
   gap: 27px;
-  min-width: 115px;
-  margin-left: 10px;
+  min-width: 108px;
+  margin-left: 0px;
 }
 
 .footer__social a {
@@ -1413,6 +1415,10 @@ li:nth-child(3n) svg {
 
 .footer__social a:active svg {
   fill: #d8e7f4;
+}
+
+.footer__ok {
+  max-width: 12px;
 }
 
 .unselectable {
@@ -1480,6 +1486,10 @@ li:nth-child(3n) svg {
     border-bottom: 1px solid #f9fbfd;
   }
 
+  .modal__list {
+    gap: 26px;
+  }
+
   .about__map img {
     height: 335px;
   }
@@ -1544,6 +1554,12 @@ li:nth-child(3n) svg {
   }
 }
 
+@media (max-width: 1300px) {
+  .footer__navigation ul {
+    max-width: 580px;
+  }
+}
+
 @media (max-width: 1200px) {
   .routes__container {
     padding: 0 25px;
@@ -1603,7 +1619,7 @@ li:nth-child(3n) svg {
 
   .header__main {
     padding-top: 27px;
-    margin-bottom: 220px;
+    margin-bottom: 192px;
   }
 
   .header__main nav {
@@ -1827,6 +1843,7 @@ li:nth-child(3n) svg {
   .footer__navigation ul {
     gap: 23px;
     margin-top: 5px;
+    max-width: 500px;
   }
 
   .footer__navigation a {
@@ -1835,13 +1852,18 @@ li:nth-child(3n) svg {
   }
 
   .footer__social ul {
-    min-width: 92px;
-    gap: 20px;
+    min-width: 82px;
+    margin-left: 0;
+    gap: 21px;
   }
 
   .footer__social a svg {
     width: 17px;
     height: 16px;
+  }
+
+  .footer__ok {
+    max-width: 10px;
   }
 }
 
@@ -1995,7 +2017,7 @@ li:nth-child(3n) svg {
   .advantages h2 {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   .advantages ul {
@@ -2142,7 +2164,7 @@ li:nth-child(3n) svg {
 
   .about {
     padding-top: 58px;
-    padding-bottom: 64px;
+    padding-bottom: 66px;
   }
 
   .about__container {
@@ -2201,6 +2223,7 @@ li:nth-child(3n) svg {
   .footer__social ul {
     margin-top: 0;
     margin-left: 0;
+    gap: 21px;
   }
 }
 

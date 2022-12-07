@@ -4,7 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  padding-bottom: 290px;
+  padding-bottom: 288px;
 
   @media (min-width: $desktop-width) {
     @include retina {
@@ -101,14 +101,14 @@
 
 .header__main {
   padding-top: 35px;
-  margin-bottom: 200px;
+  margin-bottom: 174px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
   @media (max-width: $tablet-width) {
     padding-top: 27px;
-    margin-bottom: 220px;
+    margin-bottom: 192px;
   }
 
   @media (max-width: $mobile-width) {
@@ -215,7 +215,7 @@
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
-  margin-bottom: 7px;
+  margin-bottom: 12px;
   margin-left: 95px;
 
   @media (max-width: $tablet-width) {

@@ -1,6 +1,6 @@
 .about {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 118px;
 
   @media (max-width: $tablet-width) {
     padding-top: 100px;
@@ -9,7 +9,7 @@
 
   @media (max-width: $mobile-width) {
     padding-top: 58px;
-    padding-bottom: 64px;
+    padding-bottom: 66px;
   }
 }
 
@@ -83,8 +83,8 @@
     svg {
       display: block;
       fill: $tangaroa;
-      width: 18px;
-      height: 22px;
+      max-width: 18px;
+      max-height: 22px;
     }
 
     br {

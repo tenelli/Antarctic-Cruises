@@ -66,10 +66,16 @@
     margin-top: 6px;
     padding: 0;
     gap: 33px;
+    max-width: 800px;
+
+    @media (max-width: 1300px) {
+      max-width: 580px;
+    }
 
     @media (max-width: $tablet-width) {
       gap: 23px;
       margin-top: 5px;
+      max-width: 500px;
     }
 
     @media (max-width: $mobile-width) {
@@ -120,17 +126,19 @@
     margin-top: 11px;
     padding: 0;
     gap: 27px;
-    min-width: 115px;
-    margin-left: 10px;
+    min-width: 108px;
+    margin-left: 0px;
 
     @media (max-width: $tablet-width) {
-      min-width: 92px;
-      gap: 20px;
+      min-width: 82px;
+      margin-left: 0;
+      gap: 21px;
     }
 
     @media (max-width: $mobile-width) {
       margin-top: 0;
       margin-left: 0;
+      gap: 21px;
     }
   }
 
@@ -157,5 +165,13 @@
     &:active svg {
       fill: $pattens-blue;
     }
+  }
+}
+
+.footer__ok {
+  max-width: 12px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 10px;
   }
 }
