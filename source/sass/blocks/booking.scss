@@ -139,7 +139,6 @@
     margin-bottom: 24px;
   }
 
-
   label {
     cursor: pointer;
     display: block;
@@ -163,17 +162,6 @@
       }
     }
 
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-aqua;
-    }
-
-    &:focus,
-    &:active {
-      text-decoration: underline;
-    }
-
     &::before {
       position: absolute;
       content: "";
@@ -191,6 +179,17 @@
       }
     }
   }
+}
+
+.booking__accept input:hover + label,
+.booking__accept  input:focus + label,
+.booking__accept input:active +label {
+      color: $color-aqua;
+}
+
+.booking__accept input:focus + label,
+.booking__accept input:active + label {
+  text-decoration: underline;
 }
 
 .booking__accept input:checked + label::after {

@@ -1140,17 +1140,6 @@ li:nth-child(3n) svg {
   display: none;
 }
 
-.booking__accept label:hover,
-.booking__accept label:focus,
-.booking__accept label:active {
-  color: #00e7ff;
-}
-
-.booking__accept label:focus,
-.booking__accept label:active {
-  text-decoration: underline;
-}
-
 .booking__accept label::before {
   position: absolute;
   content: "";
@@ -1162,6 +1151,17 @@ li:nth-child(3n) svg {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.booking__accept input:hover + label,
+.booking__accept input:focus + label,
+.booking__accept input:active + label {
+  color: #00e7ff;
+}
+
+.booking__accept input:focus + label,
+.booking__accept input:active + label {
+  text-decoration: underline;
 }
 
 .booking__accept input:checked + label::after {
