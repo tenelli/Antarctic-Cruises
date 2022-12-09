@@ -1435,7 +1435,7 @@ li:nth-child(3n) svg {
 }
 
 .footer__social a:active svg {
-  fill: #d8e7f4;
+  fill: #00acee;
 }
 
 .footer__ok {
