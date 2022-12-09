@@ -102,12 +102,14 @@
   }
 
   button {
+    cursor: pointer;
     width: 303px;
     padding: 10px 15px;
     font-size: 14px;
     line-height: 21px;
     color: $tangaroa;
     font-weight: 600;
+    background-color: $base-white;
     border: none;
 
     @media (max-width: $mobile-width) {

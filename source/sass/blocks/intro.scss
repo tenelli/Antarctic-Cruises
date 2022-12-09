@@ -28,6 +28,7 @@
 
   picture {
     max-width: 560px;
+    max-height: 301px;
 
     @media (max-width: $tablet-width) {
       margin: 0 auto;

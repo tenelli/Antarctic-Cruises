@@ -55,15 +55,16 @@
 
 .routes__picture {
   width: 100%;
-  height: 386px;
+  //height: 386px;
   overflow: hidden;
   position: relative;
 
   img {
     display: block;
+    border: none;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    min-height: 386px;
+    object-fit: cover; //либо cover, от решения
   }
 
   h3 {
@@ -92,6 +93,16 @@
   width: 100%;
   height: 100%;
   position: relative;
+
+  &:focus-within {
+    .routes__picture {
+      z-index: -20;
+    }
+
+    .routes__main {
+      z-index: 20;
+    }
+  }
 
   ul {
     list-style: none;
@@ -139,7 +150,8 @@
   }
 }
 
-.routes__article--no-js:hover {
+.routes__article--no-js:hover,
+.routes__article--no-js:focus-within {
   .routes__picture {
     z-index: -20;
   }

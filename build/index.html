@@ -45,7 +45,7 @@
                 </li>
               </ul>
             </nav>
-            <button class="header__burger visually-hidden" type="button" data-open-button>
+            <button class="header__burger header__burger--no-js" type="button" data-open-button>
               <span class="visually-hidden">Кнопка открытия меню.</span>
             </button>
           </div>
@@ -58,7 +58,7 @@
           <div class="container intro__container">
             <div class="intro__description">
               <h2>Путешествие<br> на&nbsp;край Земли</h2>
-              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов,<br> морских котиков и&nbsp;многое другое.</p>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
             </div>
             <picture>
               <source type="image/webp" srcset="./img/penguins.webp 1x, ./img/penguins@2x.webp 2x">
@@ -362,7 +362,7 @@
                   <input type="text" name="user-name" placeholder="Имя" pattern="^[A-Za-zА-Яа-яёЁ]+(?:[-'\s][A-Za-zА-Яа-яёЁ]+)*$" required data-name-input>
                 </label>
                 <label>
-                  <input type="tel" name="user-phone" placeholder="Телефон" required data-tel-input>
+                  <input type="tel" name="user-phone" placeholder="Телефон" required data-tel-input pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$">
                 </label>
                 <label>
                   <input type="email" name="user-email" placeholder="Email" required data-email-input>
@@ -474,16 +474,16 @@
         </div>
         <ul class="modal__list">
           <li>
-            <a class="unselectable" href="#advantages">Преимущества</a>
+            <a class="unselectable" href="#advantages" data-modal-anchor>Преимущества</a>
           </li>
           <li>
-            <a class="unselectable" href="#routes">Направления</a>
+            <a class="unselectable" href="#routes" data-modal-anchor>Направления</a>
           </li>
           <li>
-            <a class="unselectable" href="#routes">Ближайшие круизы</a>
+            <a class="unselectable" href="#routes" data-modal-anchor>Ближайшие круизы</a>
           </li>
           <li>
-            <a class="unselectable" href="#about">Контакты</a>
+            <a class="unselectable" href="#about" data-modal-anchor>Контакты</a>
           </li>
         </ul>
       </div>

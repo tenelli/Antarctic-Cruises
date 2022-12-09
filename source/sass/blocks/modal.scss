@@ -13,10 +13,12 @@
 .modal__wrapper {
   position: absolute;
   background-color: $base-white;
+  top: 0;
+  bottom: 0;
   left: 35px;
   width: calc(100% - 35px);
   padding: 20px 15px;
-  min-height: 568px;
+  min-height: 100%;
 
   ul {
     display: flex;
@@ -54,7 +56,9 @@
     height: 15px;
     border: none;
     cursor: pointer;
+    background-color: transparent;
     background-image: url("../img/svg/close.svg");
+    background-repeat: no-repeat;
   }
 }
 

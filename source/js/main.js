@@ -55,6 +55,15 @@ routes.forEach((article) => {
     temp.classList.toggle('on-bottom');
     card.classList.toggle('on-bottom');
   });
+
+  article.addEventListener('focusin', () => {
+    let temp = article.firstElementChild;
+    let card = article.lastElementChild;
+    temp.classList.toggle('on-top');
+    card.classList.toggle('on-top');
+    temp.classList.toggle('on-bottom');
+    card.classList.toggle('on-bottom');
+  });
 });
 
 
@@ -157,9 +166,11 @@ headerLogo.classList.remove('hidden-mobile');
 headerNavigation.classList.add('hidden-mobile');
 headerDarkLogo.classList.remove('is-shown');
 headerTitle.classList.remove('header__title--no-js');
+let modalAnchor = document.querySelectorAll('[data-modal-wrapper]');
+
 
 if (modal) {
-  burgerButton.classList.remove('visually-hidden');
+  burgerButton.classList.remove('header__burger--no-js');
   burgerButton.addEventListener('click', openModal);
 }
 
@@ -178,6 +189,9 @@ function closeModal() {
   closeButton.removeEventListener('click', closeModal);
   document.removeEventListener('keydown', onModalEsc);
   document.removeEventListener('click', onClickOverlay);
+  modalAnchor.forEach((anchor) => {
+    anchor.removeEventListener('click', closeModal);
+  });
 }
 
 function openModal() {
@@ -192,6 +206,9 @@ function openModal() {
   closeButton.addEventListener('click', closeModal);
   document.addEventListener('keydown', onModalEsc);
   modal.addEventListener('click', onClickOverlay);
+  modalAnchor.forEach((anchor) => {
+    anchor.addEventListener('click', closeModal);
+  });
 }
 
 function onModalEsc(evt) {

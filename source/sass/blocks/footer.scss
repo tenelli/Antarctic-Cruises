@@ -67,6 +67,7 @@
     padding: 0;
     gap: 33px;
     max-width: 800px;
+    margin-right: 40px;
 
     @media (max-width: 1300px) {
       max-width: 580px;
@@ -127,7 +128,8 @@
     padding: 0;
     gap: 27px;
     min-width: 108px;
-    margin-left: 0px;
+    max-width: 300px;
+    margin-left: 0;
 
     @media (max-width: $tablet-width) {
       min-width: 82px;
