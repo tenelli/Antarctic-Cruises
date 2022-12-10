@@ -69,6 +69,10 @@
     min-height: 386px;
     object-fit: cover;
 
+    @media (min-width: 1600px) {
+      object-fit: contain;
+    }
+
     @media (max-width: $mobile-width) {
       width: 450px;
     }
