@@ -232,3 +232,10 @@ function checkFillInputField(evt) {
 }
 
 form.addEventListener('submit', checkFillInputField);
+
+// если нужен запрет ввода, а не сообщение валидации
+
+/* formPhone.addEventListener('keyup', function () {
+    formPhone.value = formPhone.value.replace(/[A-Za-zА-Яа-яёЁ]/g, '');
+  });
+*/
